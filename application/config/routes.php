@@ -59,5 +59,7 @@ $route['update_service_state'] = "services/update_service_state/";
 
 $route['list_banners'] = "banners/list_banners/";
 
+$route['list_testimonials'] = "testimonials/list_testimonials/";
+
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
