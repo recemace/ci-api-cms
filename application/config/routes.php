@@ -61,5 +61,7 @@ $route['list_banners'] = "banners/list_banners/";
 
 $route['list_testimonials'] = "testimonials/list_testimonials/";
 
+$route['list_gallery'] = "gallery/list_gallery/";
+
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

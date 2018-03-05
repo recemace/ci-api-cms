@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 03-03-2018 a las 00:19:19
+-- Tiempo de generación: 06-03-2018 a las 00:28:44
 -- Versión del servidor: 5.5.34
 -- Versión de PHP: 5.5.10
 
@@ -46,6 +46,30 @@ INSERT INTO `db_banners` (`id_ban`, `image_ban`, `text1_ban`, `text2_ban`, `stat
 (4, 'slider7.png', 'LAVADO DE CORTINAS, ROLLER, ESTORES Y PERSIANAS', 'Servicios de calidad para su máxima comodidad.', 1, 4),
 (5, 'slider9.png', 'MANTENIMIENTO Y RECUPERACION DE PISOS', 'Servicios de calidad para su máxima comodidad.', 1, 5),
 (6, 'slider4.png', 'LIMPIEZA DE VENTANAS Y VIDRIOS', 'Servicios de calidad para su máxima comodidad.', 1, 6);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `db_gallery`
+--
+
+CREATE TABLE `db_gallery` (
+  `id_gal` int(11) NOT NULL,
+  `id_tipo_gal` int(11) NOT NULL COMMENT '1 = imagen, 2 = video',
+  `tit_gal` varchar(400) NOT NULL,
+  `des_gal` varchar(400) NOT NULL,
+  `lnk_vid_gal` varchar(400) NOT NULL,
+  `img_gal` varchar(400) NOT NULL,
+  `state` int(11) NOT NULL DEFAULT '1'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `db_gallery`
+--
+
+INSERT INTO `db_gallery` (`id_gal`, `id_tipo_gal`, `tit_gal`, `des_gal`, `lnk_vid_gal`, `img_gal`, `state`) VALUES
+(1, 2, 'test imagen', 'test imagen test imagen test imagen', 'https://youtu.be/2-Uuf-eyve0', '', 1),
+(2, 1, 'test imagen 2', 'test imagen test imagen test imagen', '', 'angular_logo.jpg', 1);
 
 -- --------------------------------------------------------
 
@@ -135,6 +159,12 @@ ALTER TABLE `db_banners`
   ADD PRIMARY KEY (`id_ban`);
 
 --
+-- Indices de la tabla `db_gallery`
+--
+ALTER TABLE `db_gallery`
+  ADD PRIMARY KEY (`id_gal`);
+
+--
 -- Indices de la tabla `db_services`
 --
 ALTER TABLE `db_services`
@@ -161,6 +191,11 @@ ALTER TABLE `db_user`
 --
 ALTER TABLE `db_banners`
   MODIFY `id_ban` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+--
+-- AUTO_INCREMENT de la tabla `db_gallery`
+--
+ALTER TABLE `db_gallery`
+  MODIFY `id_gal` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT de la tabla `db_services`
 --
