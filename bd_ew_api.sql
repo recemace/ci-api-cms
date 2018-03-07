@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 06-03-2018 a las 00:28:44
+-- Tiempo de generación: 07-03-2018 a las 18:27:01
 -- Versión del servidor: 5.5.34
 -- Versión de PHP: 5.5.10
 
@@ -57,7 +57,7 @@ CREATE TABLE `db_gallery` (
   `id_gal` int(11) NOT NULL,
   `id_tipo_gal` int(11) NOT NULL COMMENT '1 = imagen, 2 = video',
   `tit_gal` varchar(400) NOT NULL,
-  `des_gal` varchar(400) NOT NULL,
+  `des_gal` varchar(1500) NOT NULL,
   `lnk_vid_gal` varchar(400) NOT NULL,
   `img_gal` varchar(400) NOT NULL,
   `state` int(11) NOT NULL DEFAULT '1'
@@ -68,8 +68,11 @@ CREATE TABLE `db_gallery` (
 --
 
 INSERT INTO `db_gallery` (`id_gal`, `id_tipo_gal`, `tit_gal`, `des_gal`, `lnk_vid_gal`, `img_gal`, `state`) VALUES
-(1, 2, 'test imagen', 'test imagen test imagen test imagen', 'https://youtu.be/2-Uuf-eyve0', '', 1),
-(2, 1, 'test imagen 2', 'test imagen test imagen test imagen', '', 'angular_logo.jpg', 1);
+(1, 2, 'Lavado de Alfombras', 'Este servicio tiene como objetivo crear un ambiente saludable para las habitaciones ya sean oficinas o de uso personal. Este tratamiento garantiza la eliminación de moho, hongos, ácaros y alérgenos que pueden causar enfermedades y alergias. Restaura el aspecto de las alfombras además de combatir malos olores y ambientes insalubres para los usuarios, aplicando técnicas avanzadas, maquinarias y productos de tecnología especializada, logrando sanitizar y mantener los ambientes saludables.', 'https://youtu.be/30PJayhXKB0', '', 1),
+(3, 2, 'Lavado de colchones (con tratamiento anti-ácaros)', 'Este servicio tiene como objetivo restaurar el colchón en forma general, brindándoles parámetros de higiene necesarios para una habitación saludable, eliminando ácaros y alérgenos que pueden causar alergias al usuario, aplicando técnicas avanzadas, maquinarias y productos netamente de tecnología especializada, logrando así repeler ácaros y demás alérgenos hasta por 6 meses, además de restaurar el colchón y dejarlo como nuevo.', 'https://youtu.be/R-umlllRdMY', '', 1),
+(5, 2, 'Lavado de muebles y tapicería', 'Este servicio tiene como objetivo hacer relucir sus muebles recuperando el aspecto perdido, eliminaremos las manchas difíciles de origen animal, vegetal o mineral adheridas a la tela. Además este tratamiento hará que se encuentre rodeado por un ambiente más saludable, eliminando ácaros y alérgenos que puedan incomodar al usuario. Para este tratamiento restaurador aplicaremos técnicas avanzadas, maquinarias y productos de tecnología especializada, recuperando el aspecto perdido por el uso normal y a la vez logrando repeler ácaros y demás alérgenos hasta por 6 meses', 'https://youtu.be/AXTuCn3Gf6Q', '', 1),
+(9, 1, 'Lavado de Alfombras', 'Este servicio tiene como objetivo crear un ambiente saludable para las habitaciones ya sean oficinas o de uso personal. Este tratamiento garantiza la eliminación de moho, hongos, ácaros y alérgenos que pueden causar enfermedades y alergias. Restaura el aspecto de las alfombras además de combatir malos olores y ambientes insalubres para los usuarios, aplicando técnicas avanzadas, maquinarias y productos de tecnología especializada, logrando sanitizar y mantener los ambientes saludables.', '', 'gal1.png', 1),
+(10, 1, 'Lavado de colchones (con tratamiento anti-ácaros)', 'Este servicio tiene como objetivo restaurar el colchón en forma general, brindándoles parámetros de higiene necesarios para una habitación saludable, eliminando ácaros y alérgenos que pueden causar alergias al usuario, aplicando técnicas avanzadas, maquinarias y productos netamente de tecnología especializada, logrando así repeler ácaros y demás alérgenos hasta por 6 meses, además de restaurar el colchón y dejarlo como nuevo.', '', 'gal2.png', 1);
 
 -- --------------------------------------------------------
 
@@ -195,7 +198,7 @@ ALTER TABLE `db_banners`
 -- AUTO_INCREMENT de la tabla `db_gallery`
 --
 ALTER TABLE `db_gallery`
-  MODIFY `id_gal` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_gal` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT de la tabla `db_services`
 --
